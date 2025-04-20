@@ -1,0 +1,158 @@
+Ejecute la siguiente línea en Python:
+
+sts.adfuller(df_super_al_publico['precio_con_impuestos'])
+
+y me genero la siguiente salida:
+(-4.441971101611518,
+ 0.0002499789049247302,
+ 55,
+ 49947,
+ {'1%': -3.4304809315095617,
+  '5%': -2.8615978690368973,
+  '10%': -2.5668008017746735},
+ 592245.4864556047)
+ 
+ 
+La siguiente linea devolvio el resultado 
+ 
+nafta_super_results_ar_1 = nafta_super_model_ar_1.fit()
+
+Resultado:
+
+SARIMAX Results
+Dep. Variable:	precio_con_impuestos	No. Observations:	50003
+Model:	ARIMA(1, 0, 0)	Log Likelihood	-304265.433
+Date:	Fri, 18 Apr 2025	AIC	608536.865
+Time:	21:48:59	BIC	608563.325
+Sample:	0	HQIC	608545.154
+- 50003		
+Covariance Type:	opg		
+coef	std err	z	P>|z|	[0.025	0.975]
+const	1005.2055	1.686	596.157	0.000	1001.901	1008.510
+ar.L1	0.7063	0.002	391.413	0.000	0.703	0.710
+sigma2	1.129e+04	27.020	417.964	0.000	1.12e+04	1.13e+04
+Ljung-Box (L1) (Q):	2616.38	Jarque-Bera (JB):	597539.18
+Prob(Q):	0.00	Prob(JB):	0.00
+Heteroskedasticity (H):	1.35	Skew:	-0.55
+Prob(H) (two-sided):	0.00	Kurtosis:	19.90
+
+
+Warnings:
+[1] Covariance matrix calculated using the outer product of gradients (complex-step).
+
+
+
+El modelo Ar(2) me dio esto:
+SARIMAX Results
+Dep. Variable:	precio_con_impuestos	No. Observations:	50003
+Model:	ARIMA(2, 0, 0)	Log Likelihood	-301494.904
+Date:	Fri, 18 Apr 2025	AIC	602997.808
+Time:	21:53:12	BIC	603033.087
+Sample:	0	HQIC	603008.859
+- 50003		
+Covariance Type:	opg		
+coef	std err	z	P>|z|	[0.025	0.975]
+const	1005.2055	2.354	427.085	0.000	1000.592	1009.819
+ar.L1	0.4774	0.002	250.496	0.000	0.474	0.481
+ar.L2	0.3240	0.002	143.851	0.000	0.320	0.328
+sigma2	1.011e+04	21.551	469.033	0.000	1.01e+04	1.02e+04
+Ljung-Box (L1) (Q):	245.88	Jarque-Bera (JB):	809862.15
+Prob(Q):	0.00	Prob(JB):	0.00
+Heteroskedasticity (H):	1.45	Skew:	-0.79
+Prob(H) (two-sided):	0.00	Kurtosis:	22.65
+
+
+Warnings:
+[1] Covariance matrix calculated using the outer product of gradients (complex-step).
+
+El modelo AR(3) me dio esto:
+SARIMAX Results
+Dep. Variable:	precio_con_impuestos	No. Observations:	50003
+Model:	ARIMA(3, 0, 0)	Log Likelihood	-300291.905
+Date:	Fri, 18 Apr 2025	AIC	600593.810
+Time:	21:55:59	BIC	600637.909
+Sample:	0	HQIC	600607.624
+- 50003		
+Covariance Type:	opg		
+coef	std err	z	P>|z|	[0.025	0.975]
+const	1005.2055	2.942	341.720	0.000	999.440	1010.971
+ar.L1	0.4071	0.002	201.622	0.000	0.403	0.411
+ar.L2	0.2205	0.003	79.616	0.000	0.215	0.226
+ar.L3	0.2169	0.003	79.953	0.000	0.212	0.222
+sigma2	9633.1428	19.820	486.019	0.000	9594.295	9671.990
+Ljung-Box (L1) (Q):	60.57	Jarque-Bera (JB):	916020.99
+Prob(Q):	0.00	Prob(JB):	0.00
+Heteroskedasticity (H):	1.50	Skew:	-0.95
+Prob(H) (two-sided):	0.00	Kurtosis:	23.88
+
+
+Warnings:
+[1] Covariance matrix calculated using the outer product of gradients (complex-step).
+
+El modelo AR(15) dio asi:
+
+SARIMAX Results
+Dep. Variable:	precio_con_impuestos	No. Observations:	50003
+Model:	ARIMA(15, 0, 0)	Log Likelihood	-297421.703
+Date:	Fri, 18 Apr 2025	AIC	594877.406
+Time:	22:01:45	BIC	595027.343
+Sample:	0	HQIC	594924.373
+- 50003		
+Covariance Type:	opg		
+coef	std err	z	P>|z|	[0.025	0.975]
+const	1005.2055	8.977	111.980	0.000	987.612	1022.799
+ar.L1	0.2732	0.002	126.323	0.000	0.269	0.277
+ar.L2	0.1027	0.003	33.339	0.000	0.097	0.109
+ar.L3	0.0644	0.004	17.474	0.000	0.057	0.072
+ar.L4	0.0417	0.004	10.904	0.000	0.034	0.049
+ar.L5	0.0448	0.004	11.777	0.000	0.037	0.052
+ar.L6	0.0517	0.004	11.699	0.000	0.043	0.060
+ar.L7	0.0422	0.004	9.884	0.000	0.034	0.051
+ar.L8	0.0448	0.004	11.345	0.000	0.037	0.053
+ar.L9	0.0523	0.004	12.341	0.000	0.044	0.061
+ar.L10	0.0440	0.004	10.035	0.000	0.035	0.053
+ar.L11	0.0376	0.004	8.640	0.000	0.029	0.046
+ar.L12	0.0395	0.004	8.782	0.000	0.031	0.048
+ar.L13	0.0268	0.005	5.778	0.000	0.018	0.036
+ar.L14	0.0401	0.004	9.073	0.000	0.031	0.049
+ar.L15	0.0442	0.004	10.564	0.000	0.036	0.052
+sigma2	8588.5585	16.598	517.446	0.000	8556.027	8621.090
+Ljung-Box (L1) (Q):	0.29	Jarque-Bera (JB):	1270291.90
+Prob(Q):	0.59	Prob(JB):	0.00
+Heteroskedasticity (H):	1.56	Skew:	-1.58
+Prob(H) (two-sided):	0.00	Kurtosis:	27.49
+
+
+Warnings:
+[1] Covariance matrix calculated using the outer product of gradients (complex-step).
+
+# Análisis del Modelo ARIMA(15,0,0)
+
+## Mejora sustancial en el ajuste:
+- **AIC**: 594877.41 (mejor que los 600593.81 del AR(3))
+- **Autocorrelación residual**: ¡Completamente resuelta! (Ljung-Box Q = 0.29, p = 0.59)
+- **Varianza residual**: Reducción adicional a 8588.56
+
+## Aspectos destacables:
+- **Todos los términos AR son significativos** hasta el rezago 15
+- La importancia va disminuyendo pero permanece relevante (0.2732 para AR(1) hasta 0.0442 para AR(15))
+- La **suma de los coeficientes** (~0.95) indica alta persistencia en la serie
+
+## Problemas persistentes y agravados:
+- **No normalidad severa**: JB = 1270291.90 (peor que en modelos anteriores)
+- **Curtosis extrema**: 27.49 (continúa aumentando)
+- **Asimetría negativa**: -1.58 (más pronunciada)
+- **Heteroscedasticidad**: 1.56 (ligeramente peor)
+
+## Conclusiones:
+1. El modelo AR(15) ha capturado exitosamente la estructura de autocorrelación
+2. La alta significancia de todos los rezagos sugiere una memoria larga en los precios
+3. El p-valor de Ljung-Box (0.59) indica que ya no hay autocorrelación significativa en los residuos
+
+## Recomendaciones:
+1. **Aplicar transformación logarítmica** para abordar la heteroscedasticidad y no normalidad
+2. **Considerar modelos más parsimoniosos** con términos MA (como ARIMA(3,0,1))
+3. **Investigar posibles cambios estructurales** o de régimen en los datos
+4. **Examinar gráficamente los residuos** para detectar patrones o valores atípicos
+
+El modelo AR(15) ha resuelto el problema de autocorrelación pero a costa de complejidad. ¿Te gustaría probar alguna de las recomendaciones para abordar los problemas restantes?
