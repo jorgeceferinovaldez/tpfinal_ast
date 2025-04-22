@@ -13,6 +13,7 @@
 ## Integrantes:
    - Trinidad Monreal
    - Jorge Ceferino Valdez
+   - Jorge Blajevitch
 
 
 ### Dataset empleado "Nuclear Capacity":
